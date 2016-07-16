@@ -1,0 +1,161 @@
+// @import "bulma";
+
+.mainBox {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	border: solid red 1px;
+	height: 600px;
+	width: 600px;
+	margin: 25px auto;
+}
+
+.gameBoard {
+	display: flex;
+	height: 500px;
+	width: 600px;
+	border: solid orange 2px;
+	position: relative;
+}
+
+.gamePiece {
+	display: flex;
+	// border: solid 1px;;
+	width: 50px;
+	height:50px;
+	align-content: center;
+	position: absolute;
+// background-image: url(/images/beermub.png);
+// background-repeat: no-repeat;
+    
+}
+
+.scoreBoardWrapper {
+	display: flex;
+	flex-direction: row;
+	// border: orange solid 1px;;
+	width: 600px;
+	// height:100px;
+	align-items: center;
+
+}
+
+.levelBox {
+	display: flex;
+	flex-direction: column;
+	flex: 1 0 0;
+	// border: yellow solid 3px;;
+	// width: 50px;
+	// height:50px;
+	align-content: center;
+	justify-content: center;
+}
+
+.levelTitle {
+	display: flex;
+	// flex-direction: row;
+	// flex: 0 1 0;
+	// border: green solid 1px;
+	align-content: center;
+	justify-content: center;
+}
+
+.levelDesc {
+	display: flex;
+	// flex-direction: row;
+	// flex: 0 1 0;
+	// border: green solid 1px;
+	align-content: center;
+	justify-content: center;
+}
+
+
+.logo {
+	display: flex;
+	flex: 1 0 0;
+	// border: yellow solid 1px;;
+	// width: 50px;
+	// height:50px;
+	align-content: center;
+	justify-content: center;
+	font-size: 30px;
+	flex-wrap: nowrap;
+}
+
+.attemptsWrapper {
+	display: flex;
+	flex-direction: row;
+	flex: 1 0 0;
+	// border: yellow solid 1px;;
+	// width: 50px;
+	// height:50px;
+	align-content: center;
+	justify-content: center;	
+}
+
+.shotsTaken {
+	display: flex;
+	flex-direction: column;
+	flex: 1 0 0;
+	// border: green solid 1px;
+	align-content: center;
+	justify-content: center;
+	flex-wrap: nowrap;
+}
+
+.shotsTakenTitle {
+	display: flex;
+	flex-direction: row;
+	// flex: 1 0 0;
+	// border: blue solid 1px;
+	align-content: center;
+	justify-content: center;
+	// height: 25%;
+}
+
+.shotsTakenCounter {
+	// height: 75%;
+	display: flex;
+	// flex: 2 0 0;
+	flex-direction: row;
+	// border: blue solid 1px;
+	align-content: center;
+	justify-content: center;
+	// flex-wrap: nowrap;
+	font-size: 30px;
+}
+
+.shotsLeft {
+	display: flex;
+	flex-direction: column;
+	flex: 1 0 0;
+	// border: green solid 1px;
+	align-content: center;
+	justify-content: center;
+	// flex-wrap: nowrap;
+
+}
+
+.shotsLeftTitle {
+	display: flex;
+	flex-direction: row;
+	// flex: 1 0 0;
+	// height: 25%;
+	// border: blue solid 1px;
+	align-content: center;
+	justify-content: center;
+	flex-wrap: nowrap;
+}
+
+.shotsLeftCounter {
+	display: flex;
+	// flex: 2 0 0;
+	// height: 75%;
+	flex-direction: row;
+	// border: blue solid 1px;
+	align-content: center;
+	justify-content: center;
+	flex-wrap: nowrap;
+	font-size: 30px;
+}
+
