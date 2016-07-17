@@ -11,24 +11,6 @@ const should = chai.should();
 const assert = chai.assert;
 
 
-describe("the Board class", function(){
-
-	describe ("ability to create a Board", function(){
-		it ("should be an instance of Board" , function(){
-			let b = new Board();
-			expect (b).to.be.an.instanceof(Board);
-			});
-		});
-
-	// describe("ability to time the round", function (){
-	// 	it ("should")
-	// })
-
-
-});
-
-
-
 
 describe("the Game class", function(){
 
@@ -43,15 +25,16 @@ describe("the Game class", function(){
 
 		it ('should set game starting point', function(){
 			let g = new Game ();
-			expect (g.scoreboard.attempts).to.equal(0);
+			g.makeAttempt()
+			expect (g.scoreboard.attempts ++);
 		})
 
-		it ("keeps track of attempts", () =>{
+		it ("keeps track of hits and misses", () =>{
 			let g = new Game ();
 			g.makeAttempt()
-			expect (g.scoreboard.attempts).to.equal(1);						
+			expect (5 - g.scoreboard.attempts);						
 			g.makeAttempt()
-			expect (g.scoreboard.attempts).to.equal(2);
+			expect (0 + g.scoreboard.attempts);
 		});
 
 		it ("should know when the game is over", ()=> {
@@ -66,16 +49,30 @@ describe("the Game class", function(){
 					g.makeAttempt()
 					g.makeAttempt()
 					g.makeAttempt()
-			expect (g.scoreboard.attempts).to.equal(g.gameOver);
+			expect (g.scoreboard.gameOver).to.equal(5);
 		})
 
-		// it ("should track if there is a hit", () => {
-		// 	let g = new Game ();
-		// 	g.trackHit()
-		// 	expect (g.)
-		// });
+	});
+
+	describe ("our audio", function() {
+			it ("should make a hiccup sound", ()=> {
+			let audio = new Audio ();
+			// g.makeHiccup()
+			expect (audio).to.be.an.instanceof(Audio);
+		})
 	});
 	
+
+});
+
+describe("the Board class", function(){
+
+	describe ("ability to create a Board", function(){
+		it ("should be an instance of Board" , function(){
+			let b = new Board();
+			expect (b).to.be.an.instanceof(Board);
+			});
+		});
 
 });
 

@@ -1,28 +1,75 @@
 // @import "bulma";
 
+// $darkbrown=#6B2C04;
+// $mediumyellow=#F2B420;
+// $lightyellow=#F9CA52;
+
+.buttonBox {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	// border: solid black 1px;
+	height: 70px;
+	width: 600px;
+	margin: 25px auto;
+}
+
 .mainBox {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	border: solid red 1px;
+	// border: solid black 1px;
 	height: 600px;
 	width: 600px;
 	margin: 25px auto;
+	border-radius: 38px 38px 38px 38px;
+	border: 20px double #6B2C04;
+}
+
+.button {
+	color: rgb(249, 202, 82);
+	font-size: 32px;
+	padding: 15px;
+	text-shadow: 0px 2px 0px rgba(30, 30, 30, 0.8);
+	-webkit-border-radius: 38px;
+	-moz-border-radius: 38px;
+	border-radius: 38px;
+	background: rgb(148, 60, 5);
+	background: -moz-linear-gradient(90deg, rgb(148, 60, 5) 31%, rgb(244, 189, 62) 79%);
+	background: -webkit-linear-gradient(90deg, rgb(148, 60, 5) 31%, rgb(244, 189, 62) 79%);
+	background: -o-linear-gradient(90deg, rgb(148, 60, 5) 31%, rgb(244, 189, 62) 79%);
+	background: -ms-linear-gradient(90deg, rgb(148, 60, 5) 31%, rgb(244, 189, 62) 79%);
+	background: linear-gradient(0deg, rgb(148, 60, 5) 31%, rgb(244, 189, 62) 79%);
+	-webkit-box-shadow: 0px 3px 15px rgba(50, 50, 50, 0.86);
+	-moz-box-shadow:    0px 3px 15px rgba(50, 50, 50, 0.86);
+	box-shadow:         0px 3px 15px rgba(50, 50, 50, 0.86);
+}
+
+.button:hover {
+	background: linear-gradient(0deg, rgb(74, 30, 3) 31%, rgb(241, 173, 14) 79%);
+;
+
+}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 
 .gameBoard {
 	display: flex;
 	height: 500px;
 	width: 600px;
-	border: solid orange 2px;
+	// border: solid orange 2px;
 	position: relative;
 }
 
 .gamePiece {
 	display: flex;
 	// border: solid 1px;;
-	width: 50px;
-	height:50px;
+	width: 60px;
+	height:60px;
 	align-content: center;
 	position: absolute;
 // background-image: url(/images/beermub.png);
@@ -30,6 +77,14 @@
     
 }
 
+hr {
+	background-color: #6B2C04;
+	border: none;
+    height: 1px;
+	// size: 10px;
+	width: 95%;
+	// color: red;
+}
 .scoreBoardWrapper {
 	display: flex;
 	flex-direction: row;
@@ -37,6 +92,7 @@
 	width: 600px;
 	// height:100px;
 	align-items: center;
+	box-shadow: inset 6px 6px 52px -5px rgba(249, 202, 82,0.35);
 
 }
 
@@ -58,6 +114,8 @@
 	// border: green solid 1px;
 	align-content: center;
 	justify-content: center;
+	font-size: 20px;
+	color: #6B2C04;
 }
 
 .levelDesc {
@@ -67,6 +125,8 @@
 	// border: green solid 1px;
 	align-content: center;
 	justify-content: center;
+	// box-shadow: inset 6px 6px 52px -5px rgba(0,0,0,0.35);
+	color: #F2B420;
 }
 
 
@@ -80,6 +140,7 @@
 	justify-content: center;
 	font-size: 30px;
 	flex-wrap: nowrap;
+	color: #F2B420;
 }
 
 .attemptsWrapper {
@@ -105,12 +166,14 @@
 
 .shotsTakenTitle {
 	display: flex;
-	flex-direction: row;
+	// flex-direction: row;
 	// flex: 1 0 0;
 	// border: blue solid 1px;
 	align-content: center;
 	justify-content: center;
 	// height: 25%;
+	font-size: 14px;
+	color: #6B2C04;
 }
 
 .shotsTakenCounter {
@@ -119,10 +182,14 @@
 	// flex: 2 0 0;
 	flex-direction: row;
 	// border: blue solid 1px;
+	border-radius: 100%;
 	align-content: center;
 	justify-content: center;
 	// flex-wrap: nowrap;
 	font-size: 30px;
+	color: #F2B420;
+	// box-shadow: inset 6px 6px 52px -5px rgba(0,0,0,0.35);
+
 }
 
 .shotsLeft {
@@ -138,24 +205,31 @@
 
 .shotsLeftTitle {
 	display: flex;
-	flex-direction: row;
+	// flex-direction: row;
 	// flex: 1 0 0;
 	// height: 25%;
 	// border: blue solid 1px;
 	align-content: center;
 	justify-content: center;
 	flex-wrap: nowrap;
+	font-size: 14px;
+	color: #6B2C04;
 }
 
 .shotsLeftCounter {
 	display: flex;
 	// flex: 2 0 0;
-	// height: 75%;
+	// height: 90px;
+	// width: 90px;
 	flex-direction: row;
 	// border: blue solid 1px;
+	border-radius: 100%;
 	align-content: center;
 	justify-content: center;
 	flex-wrap: nowrap;
 	font-size: 30px;
+	color: #F2B420;
+	// box-shadow: inset 6px 6px 52px -5px rgba(0,0,0,0.35);
+
 }
 

@@ -1,50 +1,45 @@
 import $ from 'jquery';
 import jQuery from 'jquery';
-import {Game} from "./game"
-
-$(document).ready(animateDiv);
-
-
-
-function makeNewPosition(){  
-    var h = $(".gameBoard").height() - 50;
-    var w = $(".gameBoard").width() - 50;  
-    var nh = Math.floor(Math.random() * h);
-    var nw = Math.floor(Math.random() * w); 
-    return [nh,nw];       
-}
+import {Game} from "./game";
+// import {Board} from "./board";
+import {Board,makeNewPosition,animateDiv,calcSpeed} from "./board";
 
 
-function animateDiv(){
-    var newLocation = makeNewPosition();
-    var oldLocation = $('.gamePiece').offset();
-    var speed = calcSpeed([oldLocation.top, oldLocation.left], newLocation); 
-    $('.gamePiece').animate({ top: newLocation[0], left: newLocation[1] },
-                    1200, animateDiv);  
-};
+let g = new Game();
+// let b = new Board();
 
-function calcSpeed(oldLocation, newLocation) {
-    
-    var distanceX = Math.abs(oldLocation[1] - newLocation[1]);
-    var distanceY = Math.abs(oldLocation[0] - newLocation[0]);     
-    var greatest = distanceX > distanceY ? distanceX : distanceY; 
-    var speedModifier = 0.5;
-    var speed = Math.ceil(greatest/speedModifier);
-    return speed;
-}
-
-let g = new Game(0);
-
-$(".gameBoard").on("click", function(event) {
-    g.makeAttempt();
-    g.makeHiccup();
+$(".button").on("click", function(event) {   
+return $(document).ready(animateDiv);
 });
 
-$(".gamePiece").on("click", function (event) {
-  let result = window.confirm("Do you want to play again?");
-  let speed = 1200;
-  if (result) {
-    g = new Game(-1)
-    gamePiece = new GamePiece(speed -= 250);
+
+
+$(".gameBoard").on("click", function (event) {
+  let target = event.target;
+  console.log(target.classList)
+  if (target.classList.contains("mugIcon")) { 
+        // g.fanfare();
+       window.confirm("Do you want to play again?")
+       return g.reset();
+  } else {
+       return (g.makeAttempt(), g.makeHiccup())
   }
-})
+});
+
+// $(".gameBoard").on("click", function(event) {
+//    if (g.makeAttempt() && g.makeHiccup()) {
+//     } else {
+//         $(".gamePiece").on("click", function (event)
+//           let result = window.confirm("Do you want to play again?");
+//     });
+// });
+
+
+// $(".gamePiece").on("click", function (event) {
+//   let result = window.confirm("Do you want to play again?");
+//   let speed = 1200;
+//   if (result) {
+//     g = new Game(-1)
+//     gamePiece = new GamePiece(speed -= 250);
+//   }
+// })
