@@ -10,7 +10,7 @@ class Game {
 		};
 
 		reset(){
-			 $('.shotsLeftCounter').html(`<p>${this.scoreboard.attempts}</p>`)
+			 $('.shotsTakenCounter').html(`<p>${this.scoreboard.attempts}</p>`)
 		}
 
 		makeAttempt(){
