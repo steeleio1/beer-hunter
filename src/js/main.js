@@ -20,7 +20,7 @@ $(".gameBoard").on("click", function (event) {
   if (target.classList.contains("mugIcon")) { 
         // g.fanfare();
        window.confirm("Do you want to play again?")
-       
+       return location.reload();
   } else {
        return (g.makeAttempt(), g.makeHiccup())
   }
