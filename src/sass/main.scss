@@ -1,6 +1,6 @@
 // @import "bulma";
 
-// $darkbrown=#6B2C04;
+$darkbrown: #6B2C04;
 // $mediumyellow=#F2B420;
 // $lightyellow=#F9CA52;
 
@@ -23,7 +23,7 @@
 	width: 600px;
 	margin: 25px auto;
 	border-radius: 38px 38px 38px 38px;
-	border: 20px double #6B2C04;
+	border: 20px double $darkbrown;
 }
 
 .button {
