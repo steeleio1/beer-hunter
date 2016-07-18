@@ -25,7 +25,7 @@ class Game {
 		};
 
 		makeHiccup(){
-			let audio = new Audio("./sounds/Hiccup-SoundBible.com-605601491.mp3");
+			let audio = new Audio("../sounds/Hiccup-SoundBible.com-605601491.mp3");
 			audio.play ();
 
 		}
